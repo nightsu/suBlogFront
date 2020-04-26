@@ -4,11 +4,13 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 import IndexPage from './pages/IndexPage';
+import { BrowserRouter} from 'react-router-dom';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <BrowserRouter>
     <IndexPage />
-  </React.StrictMode>,
+    <App/>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 

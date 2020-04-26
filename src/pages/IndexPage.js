@@ -9,15 +9,10 @@ function IndexPage() {
     return (
         <div className={styles['root']}>
             <div className={styles.header}> 
-                
                 <span className={styles['title']}>
                     <p>Su's Blog</p>
                 </span>
-               
             </div>
-           
-            {/* </div> */}
-        
             <Grid container >
                 <Grid item xs={8}>
                     <LeftLayout />
@@ -25,8 +20,6 @@ function IndexPage() {
                 <Grid item xs>
                     <RightLayout />
                 </Grid>
-
-
             </Grid>
         </div>
     );
