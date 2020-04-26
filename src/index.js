@@ -7,10 +7,9 @@ import IndexPage from './pages/IndexPage';
 import { BrowserRouter} from 'react-router-dom';
 
 ReactDOM.render(
-  <BrowserRouter>
+  <React.StrictMode>
     <IndexPage />
-    <App/>
-  </BrowserRouter>,
+  </React.StrictMode>,
   document.getElementById('root')
 );
 
