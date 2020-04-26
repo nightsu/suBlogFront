@@ -1,14 +1,15 @@
 import React from 'react';
-import { Tabs, Tab, Alert } from '@material-ui/core';
+import { Tabs, Tab } from '@material-ui/core';
 import Snackbar from '@material-ui/core/Snackbar';
 import { withRouter } from 'react-router-dom';
 
 function LeftLayout(props) {
     const [state, setState] = React.useState({
-        value: './paper',
+        value: './artical',
         open: false,
         vertical: 'top',
         horizontal: 'center',
+        error:null
     });
     const { value, open, vertical, horizontal } = state;
     const handleClose = () => {
@@ -17,10 +18,10 @@ function LeftLayout(props) {
 
     const handleChange = (event, newValue) => {
         try {
-            setState({ ...state, value: newValue, open: true});
+            setState({ ...state, value: newValue});
             props.history.push(newValue); 
         } catch (error) {
-            alert(error);
+            setState({ ...state, error, open: true});
         }
 
     };
@@ -31,7 +32,7 @@ function LeftLayout(props) {
                 indicatorColor="primary"
                 value={value}
                 onChange={handleChange}>
-                <Tab label='文章' value='./paper'>文章</Tab>
+                <Tab label='文章' value='./artical'>文章</Tab>
                 <Tab label='时间线' value='./timeLine'>时间线</Tab>
                 <Tab label='相册' value='/album'>相册</Tab>
             </Tabs>

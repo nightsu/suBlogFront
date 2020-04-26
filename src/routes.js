@@ -1,9 +1,9 @@
-import Paper from './pages/paper/Paper';
+import Artical from './pages/artical/Artical';
 
 const routes = [
     {
-        path: '/paper',
-        component: Paper,
+        path: '/artical',
+        component: Artical,
     },
     // etc.
 ];
